@@ -109,7 +109,7 @@ those labels:
         wire    [15:0]  sub_out =       // your code goes here
         wire    [15:0]  and_out =       // your code goes here
         wire    [15:0]  or_out =        // your code goes here
-        wire    [15:0]  alu1_out =  // your code goes here
+        wire    [15:0]  alu1_out =      // your code goes here
         wire    [15:0]  eq_out =        // your code goes here
 
         assign  out = (func == `ADD) ?  add_out : 16'dZ;
@@ -251,7 +251,7 @@ those labels:
         reg     [7:0]   counter;
         wire            min =        // your code goes here
         wire    [7:0]   minus1 =     // your code goes here
-        wire    [7:0]   satminus = // your code goes here
+        wire    [7:0]   satminus =   // your code goes here
         wire    [7:0]   reg_in =    (reset) ? init : satminus;
 
         assign out = counter;
@@ -321,10 +321,10 @@ those labels:
         reg     [7:0]   ctr;
         assign out = ctr;
 
-        wire    [7:0]   ctr_in =  // your code here
-        wire    [7:0]   add1 =      // your code here
-        wire    [7:0]   sub1 =      // your code here
-        wire    [7:0]   addsub_out =    // your code here
+        wire    [7:0]   ctr_in =     // your code here
+        wire    [7:0]   add1 =       // your code here
+        wire    [7:0]   sub1 =       // your code here
+        wire    [7:0]   addsub_out = // your code here
 
         always @(posedge clk) begin
            ctr <= ctr_in;
@@ -441,14 +441,14 @@ those labels:
         reg     [7:0]   ctr;
         assign out = ctr;
 
-        wire            max =       // your code here
-        wire            min =       // your code here
-        wire    [7:0]   ctr_in =  // your code here
-        wire    [7:0]   add1 =      // your code here
-        wire    [7:0]   sub1 =      // your code here
-        wire    [7:0]   add_out =   // your code here
-        wire    [7:0]   sub_out =   // your code here
-        wire    [7:0]   addsub_out =    // your code here
+        wire            max =        // your code here
+        wire            min =        // your code here
+        wire    [7:0]   ctr_in =     // your code here
+        wire    [7:0]   add1 =       // your code here
+        wire    [7:0]   sub1 =       // your code here
+        wire    [7:0]   add_out =    // your code here
+        wire    [7:0]   sub_out =    // your code here
+        wire    [7:0]   addsub_out = // your code here
 
         always @(posedge clk) begin
            ctr <= ctr_in;
