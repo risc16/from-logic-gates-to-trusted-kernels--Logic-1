@@ -99,25 +99,25 @@ those labels:
     `define EQ        4'b1011
 
     module arithmetic_logic_unit (
-       input   [3:0]   func,
+        input   [3:0]   func,
         input   [15:0]  in1, 
         input   [15:0]  in2, 
         output  [15:0]  out
     );
 
         wire    [15:0]  add_out =       // your code goes here
-       wire    [15:0]  sub_out =       // your code goes here
-       wire    [15:0]  and_out =       // your code goes here
-       wire    [15:0]  or_out =        // your code goes here
-       wire    [15:0]  alu1_out =  // your code goes here
-       wire    [15:0]  eq_out =        // your code goes here
+        wire    [15:0]  sub_out =       // your code goes here
+        wire    [15:0]  and_out =       // your code goes here
+        wire    [15:0]  or_out =        // your code goes here
+        wire    [15:0]  alu1_out =  // your code goes here
+        wire    [15:0]  eq_out =        // your code goes here
 
         assign  out = (func == `ADD) ?  add_out : 16'dZ;
-     assign  out = (func == `SUB)    // your code goes here
-       assign  out = (func == `AND)    // your code goes here
-       assign  out = (func == `OR)     // your code goes here
-       assign  out = (func == `PASS1)  // your code goes here
-       assign  out = (func == `EQ)     // your code goes here
+        assign  out = (func == `SUB)    // your code goes here
+        assign  out = (func == `AND)    // your code goes here
+        assign  out = (func == `OR)     // your code goes here
+        assign  out = (func == `PASS1)  // your code goes here
+        assign  out = (func == `EQ)     // your code goes here
 
     endmodule
 
@@ -202,19 +202,19 @@ As mentioned previously, the counter in Project-0 has the following
 form:
 
     module counter32 (
-     input clk,
+       input clk,
        input reset,
-     output [31:0] out
+       output [31:0] out
     );
 
         reg     [31:0]  counter;
-     wire    [31:0]  adder = counter + 1;
+        wire    [31:0]  adder = counter + 1;
 
         assign out = counter;
 
         always @ (posedge clk) begin
-         counter <= (reset) ? 32'd0 : adder;
-      end
+           counter <= (reset) ? 32'd0 : adder;
+        end
 
     endmodule
 
@@ -243,22 +243,22 @@ those labels:
 
     module countdown8 (
         input clk,
-       input reset,
-     input   [7:0] init,
-      output  [7:0] out
+        input reset,
+        input   [7:0] init,
+        output  [7:0] out
     );
 
         reg     [7:0]   counter;
-     wire            min =        // your code goes here
-      wire    [7:0]   minus1 =     // your code goes here
-      wire    [7:0]   satminus = // your code goes here
+        wire            min =        // your code goes here
+        wire    [7:0]   minus1 =     // your code goes here
+        wire    [7:0]   satminus = // your code goes here
         wire    [7:0]   reg_in =    (reset) ? init : satminus;
 
         assign out = counter;
 
         always @ (posedge clk) begin
-         counter <= reg_in;
-       end
+           counter <= reg_in;
+        end
 
     endmodule
 
@@ -312,23 +312,23 @@ those labels:
 
     module sat_updown_8bit(
         input           clk,
-     input           reset,
-       input           inc,
-     input   [7:0]   init, 
-       output  [7:0]   out
+        input           reset,
+        input           inc,
+        input   [7:0]   init, 
+        output  [7:0]   out
     );
 
         reg     [7:0]   ctr;
-     assign out = ctr;
+        assign out = ctr;
 
         wire    [7:0]   ctr_in =  // your code here
-      wire    [7:0]   add1 =      // your code here
+        wire    [7:0]   add1 =      // your code here
         wire    [7:0]   sub1 =      // your code here
         wire    [7:0]   addsub_out =    // your code here
 
         always @(posedge clk) begin
-          ctr <= ctr_in;
-       end
+           ctr <= ctr_in;
+        end
 
     endmodule
 
@@ -432,27 +432,27 @@ those labels:
 
     module sat_updown_8bit(
         input           clk,
-     input           reset,
-       input           inc,
-     input   [7:0]   init, 
-       output  [7:0]   out
+        input           reset,
+        input           inc,
+        input   [7:0]   init, 
+        output  [7:0]   out
     );
 
         reg     [7:0]   ctr;
-     assign out = ctr;
+        assign out = ctr;
 
         wire            max =       // your code here
         wire            min =       // your code here
         wire    [7:0]   ctr_in =  // your code here
-      wire    [7:0]   add1 =      // your code here
+        wire    [7:0]   add1 =      // your code here
         wire    [7:0]   sub1 =      // your code here
         wire    [7:0]   add_out =   // your code here
         wire    [7:0]   sub_out =   // your code here
         wire    [7:0]   addsub_out =    // your code here
 
         always @(posedge clk) begin
-          ctr <= ctr_in;
-       end
+           ctr <= ctr_in;
+        end
 
     endmodule
 
